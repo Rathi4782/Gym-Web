@@ -1,0 +1,62 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  
+  .logo {
+    width: 10rem;
+    height: 3rem;
+  }
+  
+  .header-menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    color: white;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  
+  .header-menu li:hover {
+    cursor: pointer;
+    color: var(--orange);
+  }
+  
+  .bars-icon {
+    background-color: var(--appColor);
+    padding: 0.5rem;
+    border-radius: 5px;
+    position: fixed;
+      top: 2rem;
+      right: 2rem;
+    cursor: pointer;
+    z-index: 99;
+  }
+  
+  /* Media Queries */
+  @media screen and (max-width: 768px) {
+    .header-menu {
+      flex-direction: column;
+      background-color: var(--appColor);
+      padding: 2rem;
+      position: fixed;
+      top: 4rem;
+      right: 2rem;
+      border-radius: 10px;
+      transform: translateY(-100%);
+      opacity: 0;
+      visibility: hidden;
+    }
+  
+    .header-menu.active {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+  
+    .bars-icon {
+      display: block;
+    }
+  }
+  

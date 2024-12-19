@@ -1,0 +1,79 @@
+.workout-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white; 
+  padding: 2rem 1rem;
+  gap: 4rem;
+}
+
+.workout-features {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.feature-card {
+  height: 233px;
+  background: var(--caloryCard);
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.feature-card:hover {
+  background: var(--planCard);
+  cursor: pointer;
+}
+
+.feature-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.feature-title {
+  color: white; 
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.feature-description {
+  color: white; 
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.phone-image {
+  height: 600px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
+  display: block;
+  margin: 0 auto;
+}
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+  .workout-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .workout-phone {
+    order: -1;
+  }
+
+  .workout-features {
+    width: 70%;
+  }
+}
+@media (max-width: 768px) {
+
+  .workout-features {
+    width: 90%;
+  }
+}
